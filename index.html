@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulář / objednání</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=person" />
+</head>
+<body>
+  <div class="container">
+    <h1>Formulář/ objednání</h1>
+    
+    
+    <div class="form-wrapper">
+      <form>
+
+            <div class="type-select" id="type-select">
+                <button type="button" class="checked" id="dotaz">Dotaz</button>
+                <button type="button" id="akce">Akce</button>
+                <button type="button" id="sluzba">Sluzba</button>
+            </div>
+            <div id="queue" style="visibility: hidden;">
+                <p id="text"></p>
+                <span class="material-symbols-outlined">
+                    person
+                </span>
+            </div>
+
+            <label for="surname" class="akce-form">Akce</label>
+            <select class="akce-form" id="akce-input">
+                <option></option>
+                <option class="free">HSS x DYNAMICKÁ STABILIZACE - 22. - 23.3.2025</option>
+                <option class="full">HSS x DYNAMICKÁ STABILIZACE - 5. - 6.4.2025</option>
+                <option class="free">MANUÁLNÍ TERAPIE HRUDNÍKU, ŽEBER A ŠÍJE - 24. - 25.5.2025</option>
+                <option class="full">MANUÁLNÍ TERAPIE PÁNVE, BŘICHA A BEDER - 7. - 8.6.2025</option>
+                <option class="free">FYZIOCAMP 2025 - 12.-18.7.2025</option>  
+            </select>
+
+            <label for="surname" class="sluzba-form">Služba</label>
+            <select class="sluzba-form">
+                <option></option>
+                <option>Vstupní vyšetření – terapie /60 minut/ - 1500,- Kč</option>
+                <option>Paušální platba za jednotlivou kontrolní návštěvu /40 minut/ - 1200,- Kč</option>
+                <option>Karta klienta platná 3 měsíce /4x terapeutická návštěva po 40 minutách/ - 3600,- Kč</option>
+            </select>
+            <label for="surname" class="sluzba-form">Čas</label>
+            <div class="selects sluzba-form-flex">
+                <select class="sluzba-form">
+                    <option>1.6.2025</option>
+                    <option>2.6.2025</option>
+                </select>
+                <select class="sluzba-form">
+                    <option>16:00 - 17:00</option>
+                    <option>17:00 - 18:00</option>
+                    <option>18:00 - 19:00</option>
+                </select>
+            </div>
+
+
+        <label for="surname">Titul/Příjmení</label>
+        <input type="text" id="surname" />
+
+        <label for="name">Jméno</label>
+        <input type="text" id="name" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" />
+
+        <label for="phone">Telefon</label>
+        <input type="tel" id="phone" />
+
+        <label for="dob">Datum narození<br>(povinně jen pro fyzioterapeuty)</label>
+        <input type="date" id="dob" />
+
+        <label for="message">Váš dotaz/objednání na kurz</label>
+        <textarea id="message"></textarea>
+
+        <div class="submit-container full-row">
+          <button class="submit-button" type="button" id="odeslat">Odeslat</button>
+        </div>
+      </form>
+
+
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="/script.js"></script>
+</body>
+</html>
+
